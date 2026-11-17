@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agarshna Venkat</title>
+  <meta name="description" content="DevOps engineer building reliable CI/CD pipelines, cloud infrastructure and observability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Agarshna Venkat</a>
+    <nav aria-label="Primary">
+      <a href="#practices">Practices</a>
+      <a href="#code">Code</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>I build the pipelines that ship software safely.</h1>
+        <p class="lead">DevOps engineer focused on CI/CD, infrastructure as code and observability. I make deployments boring, repeatable and fast.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See projects</a>
+          <a class="btn" href="https://github.com/your-username">GitHub profile</a>
+        </div>
+      </div>
+
+      <div class="pipeline" aria-labelledby="pipe-title">
+        <div class="pipe-head">
+          <h2 id="pipe-title">deploy-production</h2>
+          <button id="run" class="btn small primary" type="button">Run pipeline</button>
+        </div>
+        <ol class="stages" id="stages">
+          <li data-stage="commit"><span class="dot"></span>Commit</li>
+          <li data-stage="build"><span class="dot"></span>Build</li>
+          <li data-stage="test"><span class="dot"></span>Test</li>
+          <li data-stage="scan"><span class="dot"></span>Scan</li>
+          <li data-stage="deploy"><span class="dot"></span>Deploy</li>
+        </ol>
+        <pre class="log" id="log" role="log" aria-live="polite">Pipeline idle. Press “Run pipeline” to simulate a release.</pre>
+        <p class="pipe-foot" id="status">Last run: not started</p>
+      </div>
+    </section>
+
+    <section id="practices" class="section">
+      <h2>Practices I work with</h2>
+      <dl class="practices">
+        <div><dt>CI/CD</dt><dd>GitHub Actions, GitLab CI and Jenkins pipelines with caching, parallel jobs and automatic rollbacks.</dd></div>
+        <div><dt>Infrastructure as code</dt><dd>Terraform modules with remote state, plan reviews on every pull request and drift detection.</dd></div>
+        <div><dt>Containers</dt><dd>Small multi-stage Docker images, non-root users and signed releases pushed to a private registry.</dd></div>
+        <div><dt>Kubernetes</dt><dd>Helm charts, health probes, autoscaling and GitOps delivery with Argo CD.</dd></div>
+        <div><dt>Observability</dt><dd>Prometheus and Grafana dashboards, alerts tied to SLOs and centralised logs.</dd></div>
+        <div><dt>Security</dt><dd>Dependency and image scanning, secrets in a vault and least-privilege IAM.</dd></div>
+      </dl>
+    </section>
+
+    <section id="code" class="section">
+      <h2>Show the work</h2>
+      <p class="sub">Trimmed examples of the configuration I write day to day.</p>
+      <div class="tabs" role="tablist" aria-label="Code examples">
+        <button role="tab" aria-selected="true" data-tab="actions">GitHub Actions</button>
+        <button role="tab" aria-selected="false" data-tab="docker">Dockerfile</button>
+        <button role="tab" aria-selected="false" data-tab="terraform">Terraform</button>
+        <button role="tab" aria-selected="false" data-tab="k8s">Kubernetes</button>
+      </div>
+      <div class="code-wrap">
+        <button class="copy" id="copy" type="button">Copy</button>
+        <pre id="panel" role="tabpanel" tabindex="0"><code id="code-block"></code></pre>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <div>
+            <h3><a href="https://github.com/your-username/project-one">Zero-downtime deploy pipeline</a></h3>
+            <p>Blue/green releases on Kubernetes with automated smoke tests and one-click rollback. Cut release time from 40 minutes to 6.</p>
+          </div>
+          <span class="tags">GitHub Actions, Helm, Argo CD</span>
+        </li>
+        <li>
+          <div>
+            <h3><a href="https://github.com/your-username/project-two">Multi-environment AWS foundation</a></h3>
+            <p>Reusable Terraform modules for networking, EKS and IAM, with separate dev, staging and prod state.</p>
+          </div>
+          <span class="tags">Terraform, AWS, Atlantis</span>
+        </li>
+        <li>
+          <div>
+            <h3><a href="https://github.com/your-username/project-three">Observability stack</a></h3>
+            <p>Prometheus, Loki and Grafana deployed as code, with SLO dashboards and on-call alert routing.</p>
+          </div>
+          <span class="tags">Prometheus, Grafana, Loki</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Let’s talk</h2>
+      <p class="sub">Open to DevOps and platform engineering roles.</p>
+      <p class="links">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+        <a href="https://github.com/your-username">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Your Name</span>
+    <span>Deployed with GitHub Pages</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
